@@ -19,7 +19,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <button class="btn btn-primary">Show Image</button>
+                        <button class="btn btn-primary" (click)="toggleImage()">Show Image</button>
                     </th>
                     <th>Product</th>
                     <th>Code</th>
@@ -28,7 +28,10 @@
                     <th>Rating</th>
                 </tr>
                 <tr *ngFor="let product of products">
-                    <td><img [src]="product.imageUrl" [style.width.px]="imageWidth" [style.margin.px]="imageMargin"/>
+                    <td><img [src]="product.imageUrl"
+                             [style.width.px]="imageWidth"
+                             [style.margin.px]="imageMargin"
+                             [hidden]="!showImage"/>
                     </td>
                     <td>{{product.productName}}</td>
                     <td>{{product.productCode}}</td>

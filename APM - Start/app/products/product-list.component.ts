@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'pm-products',
@@ -30,4 +30,9 @@ export class ProductListComponent {
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
         }
     ];
+    showImage: boolean = false;
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 }
