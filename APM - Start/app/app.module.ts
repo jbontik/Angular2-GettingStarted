@@ -6,6 +6,7 @@ import { ProductListComponent  }  from './products/product-list.component';
 import {FormsModule} from "@angular/forms";
 
 @NgModule({
+  // needs FormsModule for two way binding
   imports: [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, ProductListComponent ],
   bootstrap: [ AppComponent ]
