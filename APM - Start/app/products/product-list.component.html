@@ -19,7 +19,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <button class="btn btn-primary" (click)="toggleImage()">Show Image</button>
+                        <button class="btn btn-primary" (click)="toggleImage()">{{getLabel()}}</button>
                     </th>
                     <th>Product</th>
                     <th>Code</th>
@@ -31,7 +31,7 @@
                     <td><img [src]="product.imageUrl"
                              [style.width.px]="imageWidth"
                              [style.margin.px]="imageMargin"
-                             [hidden]="!showImage"/>
+                             *ngIf="showImage"/>
                     </td>
                     <td>{{product.productName}}</td>
                     <td>{{product.productCode}}</td>

@@ -35,4 +35,7 @@ export class ProductListComponent {
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
+    getLabel(): string {
+        return this.showImage ? "Hide image" : "Show image";
+    }
 }
