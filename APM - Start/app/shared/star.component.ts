@@ -7,6 +7,7 @@ import {Component, OnChanges, Input, Output, EventEmitter} from "@angular/core";
 })
 export class StarComponent implements OnChanges {
     @Input() rating: number;
+    // @Output decorator should be only attached to properties declared as an EventEmitter
     @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
     starWidth: number;
     divWidthPx: number = 86;
