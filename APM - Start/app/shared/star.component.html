@@ -1,11 +1,12 @@
 <div class="crop"
      [style.width.px]="starWidth"
-     [title]="rating">
+     [title]="rating"
+     (click)="onClick()">
     <div [style.width.px]="divWidthPx">
-        <span class="glyphicon glyphicon-star" (click)="onClick(1)"></span>
-        <span class="glyphicon glyphicon-star" (click)="onClick(2)"></span>
-        <span class="glyphicon glyphicon-star" (click)="onClick(3)"></span>
-        <span class="glyphicon glyphicon-star" (click)="onClick(4)"></span>
-        <span class="glyphicon glyphicon-star" (click)="onClick(5)"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
     </div>
 </div>

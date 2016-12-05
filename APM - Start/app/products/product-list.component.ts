@@ -45,7 +45,7 @@ export class ProductListComponent implements OnInit {
         console.log("########## ON INIT ##############");
     }
 
-    onNotify(starWidth: number, product: IProduct): void {
-        product.starRating = starWidth;
+    onRatingClicked(message: string): void {
+        this.pageTitle = `Product list: ${message}`;
     }
 }
