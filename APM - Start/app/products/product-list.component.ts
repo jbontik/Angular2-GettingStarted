@@ -13,12 +13,11 @@ export class ProductListComponent implements OnInit {
     pageTitle: string = 'Product List!';
     imageWidth: number = 50;
     imageMargin: number = 2;
-    products: IProduct[];
+    products: IProduct[] = this._productService.getProducts();
     showImage: boolean = false;
     listFilter: string;
 
-    constructor(productService: ProductService) {
-        this.products = productService.getProducts();
+    constructor(private _productService: ProductService) {
     }
 
     toggleImage(): void {
