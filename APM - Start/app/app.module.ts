@@ -17,7 +17,7 @@ import {RouterModule} from "@angular/router";
         BrowserModule
         , FormsModule
         , HttpModule
-        , RouterModule
+        , RouterModule.forRoot([])
     ],
     declarations: [AppComponent
         , ProductListComponent
