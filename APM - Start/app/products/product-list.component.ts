@@ -44,4 +44,8 @@ export class ProductListComponent implements OnInit {
     ngOnInit(): void {
         console.log("########## ON INIT ##############");
     }
+
+    onNotify(starWidth: number, product: IProduct): void {
+        product.starRating = starWidth;
+    }
 }
