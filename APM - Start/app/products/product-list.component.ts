@@ -3,7 +3,6 @@ import {IProduct} from "./product";
 import {ProductService} from "./product.service";
 
 @Component({
-    selector: 'pm-products',
     moduleId: module.id,
     // path relative to index.html
     templateUrl: 'product-list.component.html',
