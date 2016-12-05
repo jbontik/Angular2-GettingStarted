@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
     pageTitle: string = 'Product List!';
     imageWidth: number = 50;
     imageMargin: number = 2;
-    products: IProduct[] = this._productService.getProducts();
+    products: IProduct[];
     showImage: boolean = false;
     listFilter: string;
 
@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log("########## ON INIT ##############");
+        this.products = this._productService.getProducts();
     }
 
     onRatingClicked(message: string): void {
