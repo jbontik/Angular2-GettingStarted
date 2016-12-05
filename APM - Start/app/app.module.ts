@@ -17,7 +17,13 @@ import {RouterModule} from "@angular/router";
         BrowserModule
         , FormsModule
         , HttpModule
-        , RouterModule.forRoot([], {useHash: true})
+        , RouterModule.forRoot([
+            {path: 'products', component: ProductListComponent},
+            {path: 'product/:id', component: ProductDetailComponent},
+            {path: 'welcome', component: WelcomeComponent},
+            {path: '', redirectTo: 'welcome', pathMatch: 'full'},
+            {path: '**', redirectTo: 'welcome', pathMatch: 'full'},
+        ], {useHash: true})
     ],
     declarations: [AppComponent
         , ProductListComponent
