@@ -14,6 +14,7 @@ import {ProductService} from "./products/product.service";
     declarations: [AppComponent, ProductListComponent, ProductFilterPipe, StarComponent],
     bootstrap: [AppComponent],
     // resgisters a provider for the ProductService
+    // cf. https://angular.io/docs/ts/latest/guide/dependency-injection.html#!#injector-providers
     providers: [ProductService]
 })
 export class AppModule {
