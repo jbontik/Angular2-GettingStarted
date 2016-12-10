@@ -17,7 +17,7 @@ import {ProductService} from "./products/product.service";
         <div class="container"><router-outlet></router-outlet></div>
     </div>
     `,
-    // resgisters a provider for the ProductService
+    // registers a provider for the ProductService
     // cf. https://angular.io/docs/ts/latest/guide/dependency-injection.html#!#injector-providers
     providers: [ProductService]
 })
