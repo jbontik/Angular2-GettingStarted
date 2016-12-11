@@ -2,6 +2,21 @@
     <div class="panel-heading">
         {{pageTitle}}
     </div>
+    <div class="panel-body" *ngIf="product">
+        <div class="table-responsive">
+            <table>
+                <tr>
+                    <td>{{product.productName}}</td>
+                </tr>
+                <tr>
+                    <td>{{product.productCode}}</td>
+                </tr>
+                <tr>
+                    <td><ai-star [rating]="product.starRating"></ai-star></td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div class="panel-footer">
         <a class="btn btn-default" (click)="onBack()" style="width: 80px">
             <i class="glyphicon glyphicon-chevron-left"></i> Back

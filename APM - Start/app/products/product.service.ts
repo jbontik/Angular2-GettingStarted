@@ -10,8 +10,7 @@ import 'rxjs/add/operator/publishReplay';
 @Injectable()
 export class ProductService {
 
-    productsUrl: string = "https://safe-escarpment-80994.herokuapp.com/products";
-    productUrl: string = "https://safe-escarpment-80994.herokuapp.com/product";
+    productsUrl: string = "https://safe-escarpment-80994.herokuapp.com/products/";
 
     constructor(private _http: Http) {
     }
@@ -31,7 +30,7 @@ export class ProductService {
     }
 
     getProduct(id: number): Observable<IProduct> {
-        return this._http.get(this.productUrl + id)
+        return this._http.get(this.productsUrl + id)
             .map(r=> <IProduct>r.json())
             .do(data => console.log(`Product ${id}: ${JSON.stringify(data)}`))
             .publishReplay(1)

@@ -11,6 +11,7 @@ import {ProductService} from "./product.service";
 export class ProductDetailComponent implements OnInit {
     pageTitle: string = "Product Detail";
     product: IProduct;
+    errorMessage: any;
 
     constructor(private _route: ActivatedRoute
         , private _router: Router
@@ -19,9 +20,12 @@ export class ProductDetailComponent implements OnInit {
 
     ngOnInit(): void {
         let id = +this._route.snapshot.params['id'];
-        this.pageTitle += `: ${id}`;
+        this._productService.getProduct(id)
+            .subscribe(
+                p => this.product = p,
+                err => this.errorMessage = <any>err);
 
-
+        this.pageTitle += `: ${id}`
     }
 
     onBack(): void {
